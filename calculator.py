@@ -1,4 +1,5 @@
 def calculator(num1, num2, operator):
+
     if operator == "+":
         result = num1 + num2
         print(f"the result of sum is {num1} + {num2} = {result}")
