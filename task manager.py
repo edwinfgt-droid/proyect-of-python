@@ -6,9 +6,9 @@ def displaytasks(all_tasks):
             print(f'{index + 1}. {task}')
 
 def newOperation(all_tasks):
-     opertaion = input('Press 'M' to add a task, 'D' to delete a task, 'V' to view all tasks 'h' to edit a tasks 'g'or the quit the application: ')
+     opertaion = input('Press 'A' to add a task, 'D' to delete a task, 'V' to view all tasks 'h' to edit a tasks 'g'or the quit the application: ')
   
-    if operation == 'a':
+    if operation == 'A':
     addTask(tasks)
     
     elif operation == 'D':
