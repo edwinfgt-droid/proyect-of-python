@@ -1,6 +1,6 @@
 import tkinter as tk 
 from tkinter import messagebox
-root = tk.Tk()
+root = tk.Tk()          
 root.title("Calculadora")
 root.geometry("400x500")
 root.resizable(0,0)
@@ -11,7 +11,7 @@ color_boton_igual = '#4caf50'
 color_boton_clear = '#072323'
 
 screen_text = tk.StringVar()
-screen_label = tk.Label(root, textvariable=screen_text, font=('arial', 30), bg='white', fg=color_text, anchor='e', padx=10)
+screen_label = tk.Label(root, textvariable=screen_text, font=('arial', 30), bg="#1E0656", fg=color_text, anchor='e', padx=10)
 screen_label.grid(row=0, column=0, sticky='we', pady=10)   
 
 expression = ""
@@ -20,7 +20,7 @@ def press(num):
     global expression
     expression += str(num)
     screen_text.set(expression)
-
+    
 def equalexpress():
     global expression
     try:
@@ -38,10 +38,11 @@ def clear():
     expression = ''
 
 buttons = [
-    ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
-    ('4', 2, 0), ('5', 2, 1), ('6', 2, 2), ('*', 2, 3),
-    ('1', 3, 0), ('2', 3, 1), ('3', 3, 2), ('-', 3, 3),
-    ('0', 4, 0), ('.', 4, 1), ('+', 4, 2),
+    ('C', 1, 0), ('%', 1, 1), ('<', 1, 2), ('/', 1, 3),
+    ('7', 2, 0), ('8', 2, 1), ('9', 2, 2), ('/', 2, 3),
+    ('4', 3, 0), ('5', 3, 1), ('6', 3, 2), ('*', 3, 3),
+    ('1', 4, 0), ('2', 4, 1), ('3', 4, 2), ('-', 4, 3),
+    ('0', 5, 0), ('.', 5, 1),              ('+', 5, 3),
 ]
 
 for (text, row, col) in buttons: 
